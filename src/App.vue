@@ -1,5 +1,8 @@
 <template>
-	<router-view />
+	<div class="app">
+		<div class="bg-red">Hello World</div>
+		<router-view />
+	</div>
 </template>
 
 <script setup lang="ts"></script>

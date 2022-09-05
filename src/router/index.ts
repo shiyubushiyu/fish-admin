@@ -7,6 +7,5 @@ export const router = createRouter({
     VITE_HASH_ROUTE === 'true'
       ? createWebHashHistory(VITE_BASE_URL)
       : createWebHistory(VITE_BASE_URL),
-  routes: transformAuthRoutesToVueRoutes(constantRoutes),
-  scrollBehavior
+  routes: constantRoutes as any
 })
