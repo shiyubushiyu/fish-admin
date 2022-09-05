@@ -1,30 +1,52 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-// 如果编辑器提示 path 模块找不到，则可以安装一下 @types/node -> npm i @types/node -D
-import { resolve } from "path";
+import { fileURLToPath } from 'url'
+import { defineConfig, loadEnv } from 'vite'
+import { getEnvConfig } from './.env-config'
+import { viteDefine, setupVitePlugins, createViteProxy } from './build'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "src"), // 设置 `@` 指向 `src` 目录
+export default defineConfig((configEnv) => {
+  const viteEnv = loadEnv(configEnv.mode, process.cwd()) as ImportMetaEnv
+
+  const rootPath = fileURLToPath(new URL('./', import.meta.url))
+  const srcPath = `${rootPath}src`
+
+  const isOpenProxy = viteEnv.VITE_HTTP_PROXY === 'true'
+  const envConfig = getEnvConfig(viteEnv)
+
+  return {
+    base: viteEnv.VITE_BASE_URL,
+    resolve: {
+      // 路径别名
+      alias: {
+        '~': rootPath,
+        '@': srcPath
+      }
     },
-  },
-  base: "./", // 设置打包路径
-  server: {
-    port: 4000, // 设置服务启动端口号
-    open: true, // 设置服务启动时是否自动打开浏览器
-    cors: true, // 允许跨域
-
-    // 设置代理，根据我们项目实际情况配置
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://xxx.xxx.xxx.xxx:8000',
-    //     changeOrigin: true,
-    //     secure: false,
-    //     rewrite: (path) => path.replace('/api/', '/')
-    //   }
-    // }
-  },
-});
+    // 构建时间
+    define: viteDefine,
+    // vite插件
+    plugins: setupVitePlugins(viteEnv, srcPath),
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "./src/styles/scss/global.scss" as *;`
+        }
+      }
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 3200,
+      open: true,
+      proxy: createViteProxy(isOpenProxy, envConfig)
+    },
+    preview: {
+      port: 5050
+    },
+    build: {
+      brotliSize: false,
+      sourcemap: false,
+      commonjsOptions: {
+        ignoreTryCatch: false
+      }
+    }
+  }
+})
