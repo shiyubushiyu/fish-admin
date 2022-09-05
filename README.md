@@ -1,25 +1,25 @@
 <div align="center">
-	<h1>fish-material</h1>
+	<h1>fish-admin</h1>
 </div>
 
 [![license](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## 简介
 
-fish-material 基于 Vue3、Vite、TypeScript、Naive UI
+fish-admin 基于 Vue3、Vite、TypeScript、Naive UI
 
 ## 特性
 
 - **最新技术栈**：使用 Vue3/vite2 等前端前沿技术开发, 使用高效率的npm包管理器pnpm
 - **TypeScript**：应用程序级 JavaScript 的语言
-- **主题**：丰富可配置的主题、暗黑模式，基于原子css - unocss的动态主题颜色
+- **主题**：丰富可配置的主题、暗黑模式，基于原子css - unocss的动态主题颜色(待实现)
 - **代码规范**：丰富的规范插件及极高的代码规范
 - **权限路由**：简易的路由配置、基于mock的动态路由能快速实现后端动态路由
 - **请求函数**：基于axios的完善的请求函数封装，提供Promise和hooks两种请求函数，加入请求结果数据转换的适配器
 
 ## 文档
 
-- [项目文档](https://docs.soybean.pro)
+- [项目文档](待加入)
 
 
 ## 安装使用
@@ -27,7 +27,7 @@ fish-material 基于 Vue3、Vite、TypeScript、Naive UI
 - 克隆代码
 
 ```bash
-git clone http://192.168.1.113/18973216639/load-material.git
+git clone https://github.com/shiyubushiyu/fish-admin.git
 ```
 
 - 安装依赖
@@ -54,13 +54,6 @@ pnpm build
 
 ## Git 贡献提交规范
 
-项目已经内置angular提交规范，通过git cz 代替git commit 命令即可。
-
-git cz命令需要全局安装 commitizen
-
-```bash
-pnpm i -g commitizen
-```
 
 ## 浏览器支持
 
