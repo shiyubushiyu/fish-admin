@@ -28,6 +28,7 @@
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-promise": "^6.0.0",
 		"eslint-plugin-vue": "^9.4.0",
+		"mockjs": "^1.1.0",
 		"naive-ui": "^2.33.2",
 		"prettier": "^2.7.1",
 		"rollup-plugin-visualizer": "^5.8.1",
@@ -37,6 +38,7 @@
 		"vite": "^3.0.7",
 		"vite-plugin-compression": "^0.5.1",
 		"vite-plugin-html": "^3.2.0",
+		"vite-plugin-mock": "2.9.6",
 		"vue-tsc": "^0.39.5"
 	}
 }

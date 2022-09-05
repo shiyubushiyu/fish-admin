@@ -5,6 +5,7 @@ import compress from './compress'
 import html from './html'
 import unocss from './unocss'
 import unplugin from './unplugin'
+import mock from './mock'
 
 /**
  * vite插件
@@ -15,7 +16,7 @@ export function setupVitePlugins(
   viteEnv: ImportMetaEnv,
   srcPath: string
 ): (PluginOption | PluginOption[])[] {
-  const plugins = [...vue, html(viteEnv), unocss, ...unplugin(srcPath)]
+  const plugins = [...vue, html(viteEnv), unocss, ...unplugin(srcPath), mock]
 
   if (viteEnv.VITE_VISUALIZER === 'true') {
     plugins.push(visualizer)
