@@ -14,7 +14,7 @@ export const constantRoutes: AuthRoute.Route[] = [
   {
     name: 'login',
     path: '/login',
-    component: () => import('@/views/login/login.vue'),
+    component: () => import('@/views/fish-view/login/index.vue'),
     meta: {
       title: '登录'
     }

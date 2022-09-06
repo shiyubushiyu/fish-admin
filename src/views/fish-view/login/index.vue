@@ -22,12 +22,34 @@
 </template>
 
 <script setup lang="ts">
+import type { FormInst, FormRules } from 'naive-ui'
+import { formRules } from '@/utils'
+import { useAuthStore } from '@/store'
+
+const autoStore = useAuthStore()
+const { login } = autoStore
+const formRef = ref<(HTMLElement & FormInst) | null>(null)
 const model = reactive({
 	userName: 'admin',
 	password: '123456',
 })
-const rules = ref()
-function handleSubmit() { }
+const rules: FormRules = {
+	userName: formRules.required,
+	password: formRules.required
+}
+
+/* 表达提交 */
+function handleSubmit(e: MouseEvent) {
+	if (!formRef.value) return
+	e.preventDefault()
+
+	formRef.value.validate((errors) => {
+		if (!errors) {
+			const { userName, password } = model
+			login(userName, password)
+		}
+	})
+}
 </script>
 
 <style scoped>
