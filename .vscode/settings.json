@@ -38,7 +38,7 @@
 	},
 	"terminal.integrated.cursorStyle": "line",
 	"terminal.integrated.fontSize": 14,
-	"terminal.integrated.fontWeight": 1200,
+	"terminal.integrated.fontWeight": 800,
 	"terminal.integrated.tabs.enabled": true,
 	"unocss.root": "src",
 	"workbench.iconTheme": "material-icon-theme",

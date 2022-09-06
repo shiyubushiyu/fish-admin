@@ -1,6 +1,5 @@
 <template>
-	<div class="app">
-		<div class="bg-red">Hello World</div>
+	<div class="app h-full w-full">
 		<router-view />
 	</div>
 </template>

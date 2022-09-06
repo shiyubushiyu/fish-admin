@@ -4,7 +4,8 @@ export default defineConfig({
   exclude: ['node_modules', '.git', 'dist', 'mock', './stats.html'],
   presets: [presetUno({ dark: 'class' })],
   shortcuts: {
-    'wh-full': 'w-full h-full'
+    'wh-full': 'w-full h-full',
+    'flex-center': 'flex justify-center items-center'
   },
   theme: {
     colors: {
@@ -28,7 +29,7 @@ export default defineConfig({
       error_hover: 'var(--error-color-hover)',
       error_pressed: 'var(--error-color-pressed)',
       error_active: 'var(--error-color-active)',
-      dark: '#18181c'
+      dark: '#73DBDE'
     }
   }
 })
