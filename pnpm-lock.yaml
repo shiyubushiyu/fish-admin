@@ -1,11 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/crypto-js': ^4.1.1
   '@types/node': ^18.7.14
+  '@types/qs': ^6.9.7
   '@typescript-eslint/eslint-plugin': 5.27.1
   '@typescript-eslint/parser': 5.27.1
   '@vitejs/plugin-vue': ^3.0.3
   axios: ^0.27.2
+  crypto-js: ^4.1.1
   dayjs: ^1.11.5
   eslint: ^8.0.1
   eslint-config-prettier: ^8.5.0
@@ -35,6 +38,7 @@ specifiers:
 
 dependencies:
   axios: 0.27.2
+  crypto-js: 4.1.1
   dayjs: 1.11.5
   pinia: 2.0.21_pj7ch6rmow6odq73xb5hfvge3q
   qs: 6.11.0
@@ -42,7 +46,9 @@ dependencies:
   vue-router: 4.1.5_vue@3.2.38
 
 devDependencies:
+  '@types/crypto-js': 4.1.1
   '@types/node': 18.7.14
+  '@types/qs': 6.9.7
   '@typescript-eslint/eslint-plugin': 5.27.1_jj3453fnhcurhkrcegqgsxzbzi
   '@typescript-eslint/parser': 5.27.1_yqf6kl63nyoq5megxukfnom5rm
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.38
@@ -306,6 +312,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@types/crypto-js/4.1.1:
+    resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
+    dev: true
+
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
     dev: true
@@ -338,6 +348,10 @@ packages:
 
   /@types/node/18.7.14:
     resolution: {integrity: sha512-6bbDaETVi8oyIARulOE9qF1/Qdi/23z6emrUh0fNJRUmjznqrixD4MpGDdgOFk5Xb0m2H6Xu42JGdvAxaJR/wA==}
+    dev: true
+
+  /@types/qs/6.9.7:
+    resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
     dev: true
 
   /@types/resolve/1.17.1:
@@ -1084,6 +1098,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /css-render/0.15.11:
     resolution: {integrity: sha512-hnLrHPUndVUTF5nmNPRey6hpixK02IPUGdEsm2xRjvJuewToyrVFx9Nmai8rgfVzhTFo5SJVh2PHAtzaIV8JKw==}

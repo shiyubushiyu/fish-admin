@@ -29,7 +29,7 @@ export default defineConfig({
       error_hover: 'var(--error-color-hover)',
       error_pressed: 'var(--error-color-pressed)',
       error_active: 'var(--error-color-active)',
-      dark: '#73DBDE'
+      dark: '#069198'
     }
   }
 })
